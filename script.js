@@ -11,7 +11,7 @@ function controlarEstadoChile() {
     if (horaChile >= horaApertura && horaChile < horaCierre) {
         statusBtn.classList.add('status-online');
         statusBtn.classList.remove('status-offline');
-        statusBtn.title = "Online (Horario Chile)";
+        statusBtn.title = "Online";
     } else {
         statusBtn.classList.add('status-offline');
         statusBtn.classList.remove('status-online');
