@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Haz</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haz</title>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="pp">
+        <div id="pp-main-file">
+            <button class="btn-status status-online" title="Usuario en línea"></button>
+            
+            <div id="future"></div>
+
+            <div class="id_photo">
+                <img src="https://i.ibb.co/WvjY5MLR/Screenshot-2.png" alt="User Photo">
+            </div>
+
+            <div class="pp-title">
+                <br>
+                <span class="pre">Ya no me guardo nada</span>
+                <span class="psycho">𝗛ꭺꮓ <i class="fas fa-arrow-up" style="font-size: 10px;"></i> 
+                    <span class="pass">- - - - - - - - - - -</span>
+                </span>
+                
+                <span class="info">
+                    <i class="fas fa-user-plus"></i> nn<br>
+                    <i class="fas fa-thumbtack"></i> leo<br>
+                    <i class="fas fa-globe"></i> 1004002
+                </span>
+            </div>
+
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use href="#gentle-wave" x="48" y="0" fill="rgba(96, 96, 96,0.7)" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <audio id="musicaFondo" loop>
+        <source src="assets/xhaz.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="./script.js"></script>
+    <script>
+        
+        window.addEventListener('click', () => {
+            const audio = document.getElementById('musicaFondo');
+            if (audio.paused) {
+                audio.play().catch(error => console.log("El autoplay fue bloqueado."));
+            }
+        }, { once: true });
+    </script>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
