@@ -15,7 +15,7 @@ function controlarEstadoChile() {
     } else {
         statusBtn.classList.add('status-offline');
         statusBtn.classList.remove('status-online');
-        statusBtn.title = "Offline (Fuera de horario)";
+        statusBtn.title = "Offline";
     }
 }
 
