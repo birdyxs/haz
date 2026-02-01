@@ -1,25 +1,26 @@
 const statusBtn = document.querySelector('.btn-status');
+const xatID = "1004002"; 
 
-function controlarEstadoChile() {
-    const opciones = { timeZone: 'America/Santiago', hour: 'numeric', hour12: false };
-    const horaChile = parseInt(new Intl.DateTimeFormat('en-US', opciones).format(new Date()));
+function verificarPresenciaXat() {
+    const img = new Image();
+    
+    img.src = `https://xat.com/web_gear/chat/av/${xatID}.png?${new Date().getTime()}`;
 
+    img.onload = function() {
 
-    const horaApertura = 9;
-    const horaCierre = 19;
-
-    if (horaChile >= horaApertura && horaChile < horaCierre) {
         statusBtn.classList.add('status-online');
         statusBtn.classList.remove('status-offline');
-        statusBtn.title = "Online";
-    } else {
+        statusBtn.title = "En línea";
+    };
+
+    img.onerror = function() {
+
         statusBtn.classList.add('status-offline');
         statusBtn.classList.remove('status-online');
-        statusBtn.title = "Offline";
-    }
+        statusBtn.title = "Desconectado";
+    };
 }
 
+verificarPresenciaXat();
 
-controlarEstadoChile();
-
-setInterval(controlarEstadoChile, 60000);
+setInterval(verificarPresenciaXat, 120000);
